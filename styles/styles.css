@@ -1,0 +1,132 @@
+:root {
+    --branco-principal: #fff;
+    --azul-escuro: #205274;
+    --azul-claro: #6fb6cc;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--azul-escuro);
+}
+
+.bg-inicial {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.87), rgba(0, 0, 0, .3)),
+        url(../images/next.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.bg-arma {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.87), rgba(0, 0, 0, .3)),
+        url(../images/fundo-arma.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bg-acc {
+    background-color: var(--azul-claro);
+    color: var(--branco-principal);
+}
+
+.bg-acc:hover {
+    background-color: var(--azul-escuro);
+    color: var(--branco-principal);
+}
+
+.bg-acc-txt {
+    padding: 40px;
+    color: var(--azul-escuro);
+    font-size: 1.1rem;
+}
+
+.navbar {
+    background-color: #000000af;
+    position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1;
+
+}
+
+.navbar-brand {
+    color: var(--branco-principal);
+    font-size: 26px;
+}
+
+.navbar-brand:hover {
+    color: var(--branco-principal);
+}
+
+.navbar-toggler {
+    color: var(--branco-principal);
+    font-size: 35px;
+    box-shadow: none !important;
+    border: 0;
+}
+
+.nav-link {
+    color: var(--branco-principal);
+}
+
+.dropdown-menu {
+    color: var(--branco-principal);
+    background-color: var(--azul-escuro);
+    border: 0;
+}
+
+.dropdown-item {
+    color: var(--branco-principal);
+}
+
+.nav-link:hover {
+    color: var(--azul-claro);
+}
+
+.dropdown-item:hover {
+    background-color: var(--azul-escuro);
+    color: var(--azul-claro);
+}
+
+.btn {
+    background-color: #0000009a;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.fundo {
+    background-color: var(--azul-claro);
+}
+
+.sect {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    color: var(--branco-principal);
+    font-size: 20px;
+}
+
+h4 {
+    color: var(--azul-claro);
+}
+
+.arma btn {
+    background-color: var(--azul-claro);
+}

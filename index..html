@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megamech</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+
+</head>
+
+<body>
+
+    <!-- cabeçalho e tela inicial-->
+    <section class="container-fluid bg-inicial " id="inicial">
+
+        <nav class="navbar navbar-expand-lg" >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#inicial">RoboCup</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-filter-right"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#sobre" >O robô</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#armas" >Arma</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hardware" >Hardware</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#midia" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Mídia
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#carousel" >Fotos</a></li>
+                                <li><a class="dropdown-item" href="#videos" >Vídeos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <div class="position-absolute top-50 start-50 translate-middle d-flex d-inline-flex flex-column gap-4">
+            <h1 class="text-light display-1 ">MegaMech</h1>
+            <a type="button" class="btn btn-outline-light" href="#sobre">MAIS INFORMAÇÕES</a>
+        </div>
+    </section>
+
+
+
+    <!-- SOBRE O ROBÔ -->
+    <section class="container d-flex flex-column gap-4 sect" id="sobre">
+        <h2 class="display-1 fs-1 text-light center">
+            Sobre o Robô
+        </h2>
+
+        <p>O nosso robô consiste em um robô semi-autônomo, sobre a base de um carrinho
+            controlado
+            via módulo bluetooth acionado
+            por
+            celular, capaz de transportar uma bexiga, munido de uma arma, que será controlada através do arduíno.</p>
+        <p> Decidimos trabalhar com uma base em formato de triângulo para estar de acordo com uma
+            estética agradável, como
+            também,
+            tivemos a ideia de inspiração para o nome do robô, o vilão do filme de animação Megamente. Seguimos com essa
+            mesma
+            dinâmica para o design e escolha das cores para o robô. No filme, o vilão possui uma roupa com diversos
+            “espinhos”,
+            o
+            que também nos serviu de inspiração para a ideia da arma utilizada.</p>
+
+    </section>
+
+
+    <!-- SISTEMA DE ARMA -->
+    <section class="container-fluid  bg-arma " id="armas">
+        <div class="container d-flex flex-column gap-4 sect">
+            <h2 class="display-1 fs-1 text-light center"> Sistema de Armas </h2>
+
+            <div class="accordion accordion-flush w-100" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header ">
+                        <button class="accordion-button collapsed bg-acc" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Anatomia da arma
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <p class="bg-acc-txt">Esta arma é composta por um mecanismo movido por sensores e um motor que
+                            atua diretamente em uma corrediça posicionada
+                            diagonalmente. A corrediça está presa em dois pontos: uma extremidade está fixada na base e
+                            a outra no vértice de um
+                            triângulo de 15 centímetros de altura. No topo dessa estrutura, há uma placa de MDF medindo
+                            22 centímetros de
+                            comprimento, 3 centímetros de largura e 2 centímetros de espessura. Nas extremidades dessa
+                            placa, há agulhas de 2
+                            centímetros, estrategicamente posicionadas para interagir com o alvo. Esse sistema permite
+                            que a arma se mova com
+                            precisão ao ser acionada.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-acc" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Após o acionamento
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <p class="bg-acc-txt">Quando um ou mais sensores são ativados, o motor inicia o movimento da
+                            corrediça, empurrando a placa de MDF com as
+                            agulhas para frente. A placa se desloca por 30 centímetros a partir da borda da base,
+                            atingindo o alvo com precisão.
+                            Após 10 segundos de ação, a corrediça reversa o movimento, trazendo a placa de volta à sua
+                            posição inicial, pronta para
+                            um novo acionamento. Durante esse tempo, o sistema permanece ativo, garantindo um ciclo
+                            controlado e preciso.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HARDWARE -->
+    <section class="container d-flex flex-column gap-3 mt-5" id="hardware">
+        <h2 class="display-1 fs-1 text-light center "> Sobre o Hardware </h2>
+        <p> Sobre o hardware, a base é feita de MDF, oferecendo uma estrutura leve e resistente. O cérebro do robô é um
+            Arduino, responsável por controlar os motores e sensores, e está conectado a um módulo Bluetooth, que
+            permite controlar o robô pelo celular. </p>
+
+        <p>Para a locomoção, é usado os motores DC com rodas, controlados por um Motor Shield acoplado ao Arduino, além
+            de uma rodinha giratória que garante mobilidade em diferentes direções.</p>
+
+        <p>As chaves de fim de curso para detectar contato, ativando a arma do robô, que é composta por uma corrediça
+            com agulhas na ponta, prontas para estourar a bexiga do oponente.</p>
+
+        <p>A energia do robô vem de seis pilhas AA, conectadas a um soquete de pilhas, garantindo a autonomia necessária
+            para a competição. Além disso, uma fita LED endereçável e um LED de 3mm que indicam se o robô está ligado ou
+            desligado, tudo controlado por uma chave geral on/offconectada ao protoboard.</p>
+        <h4 class="display-1 fs-2 center">Componentes:</h4>
+        <div class="row">
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3 ">
+                <div class="card fundo">
+                    <img src="./images/componentes/Arduino.jpg" class="card-img-top" alt="Foto de um Arduino">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Arduíno</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Base-MDF.jpg" class="card-img-top" alt="Foto de uma base de MDF">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Base de MDF</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Chave-fim-de-curso.png" class="card-img-top"
+                        alt="Foto de uma chave de fim de curso">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Chave fim de curso</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Chave-liga-desliga.jpg" class="card-img-top"
+                        alt="foto de uma chave liga/desliga">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Chave liga/desliga</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Corredica-30cm.jpg" class="card-img-top"
+                        alt="Foto com 2 corrediças de 30cm cada uma">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Corredeiça 30cm</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Fita-led-enderecavel.jpg" class="card-img-top"
+                        alt="foto de uma fita LED endereçavel">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Fita LED endereçavel</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Kit-Jumper-MF.jpg" class="card-img-top"
+                        alt="foto de um Kit Jumper MF">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Kit Jumper MF</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Kit-Jumper-MM.JPG" class="card-img-top"
+                        alt="foto de um Kit Jumper MM">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Kit Jumper MM</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/LED-3MM.jpg" class="card-img-top" alt="foto de uma LED de 3mm">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">LED de 3mm</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Modulo-bluetooth.jpg" class="card-img-top"
+                        alt="foto de um módulo bluetooth">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Módulo bluetooth</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Motor-DC-com-rodas.jpg" class="card-img-top"
+                        alt="foto de um motor DC com rodas">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Motor DC com rodas</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Motor-Shield.jpg" class="card-img-top" alt="foto de um motor shield">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Motor Shield</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/ProtoBoard.jpg" class="card-img-top" alt="foto de um ProtoBoard">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">ProtoBoard</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Roda-Giratoria.jpg" class="card-img-top"
+                        alt="foto de uma roda giratória">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Roda giratória</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+            <!-- inicio card -->
+            <div class="col-md-6 col-lg-4 col-xl-3 my-3">
+                <div class="card fundo">
+                    <img src="./images/componentes/Soquete-pilha.png" class="card-img-top"
+                        alt="foto de um soquete de seis pilhas">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Soquete de seis pilhas</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim card -->
+    </section>
+
+    <!-- CARROSSEL - FOTOS -->
+    <section class="mt-5" id="carousel">
+        <h2 class="display-1 fs-1 text-light center">
+            Fotos
+        </h2>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/carousel/imagem01.jpg" class="d-block w-100" alt="Foto do robô ">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/carousel/imagem02.jpg" class="d-block w-100" alt="Foto do robô com a arma ativada">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/carousel/imagem03.jpg" class="d-block w-100" alt="Foto do robô sendo montado">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/carousel/imagem04.jpg" class="d-block w-100" alt="Foto do robô sendo montado">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/carousel/imagem05.jpg" class="d-block w-100" alt="Foto do robô com a arma recolhida">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="videos">
+        <div class="container text-center p-5">
+            <div class="row">
+                <div class="col">
+                    <h2 class="display-1 fs-1 text-light center">
+                        Vídeos
+                    </h2>
+                </div>
+
+            </div>
+            <div class="row p-5">
+                <div class="col">
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/dNSMfnRJ4RA?si=xt0418_83izKSjFr"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/MrNl7F6Ekdo?si=K0d4mJn1KDYCeSbf"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
